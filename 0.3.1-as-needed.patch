@@ -1,0 +1,15 @@
+--- origsrc/gnome-code-assistance-0.3.1/backends/vala/Makefile.am	2014-03-07 02:45:58.000000000 -0600
++++ src/gnome-code-assistance-0.3.1/backends/vala/Makefile.am	2014-04-01 16:01:38.820265900 -0500
+@@ -51,10 +51,10 @@ backends_vala_valahelper_VALAFLAGS =		\
+ backends_vala_libvalashared_la_CFLAGS = $(BACKEND_VALA_CFLAGS) -w
+ 
+ backends_vala_vala_CFLAGS = $(BACKEND_VALA_CFLAGS) -w
+-backends_vala_vala_LDADD = $(BACKEND_VALA_LIBS) backends/vala/libvalashared.la
++backends_vala_vala_LDADD = backends/vala/libvalashared.la $(BACKEND_VALA_LIBS)
+ 
+ backends_vala_valahelper_CFLAGS = $(BACKEND_VALA_CFLAGS) -w
+-backends_vala_valahelper_LDADD = $(BACKEND_VALA_LIBS) backends/vala/libvalashared.la
++backends_vala_valahelper_LDADD = backends/vala/libvalashared.la $(BACKEND_VALA_LIBS)
+ 
+ valabackendservicedir = $(datadir)/dbus-1/services
+ valabackendservice_DATA = \
