@@ -1,4 +1,4 @@
-inherit gnome2 python3 ruby
+inherit python3 ruby gnome2
 
 NAME="gnome-code-assistance"
 VERSION=0.3.1
