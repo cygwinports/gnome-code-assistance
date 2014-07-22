@@ -2,7 +2,7 @@ inherit python3 ruby gnome2
 
 NAME="gnome-code-assistance"
 VERSION=0.3.1
-RELEASE=1
+RELEASE=2
 CATEGORY="GNOME"
 SUMMARY="GNOME code assistance service"
 DESCRIPTION="gnome-code-assistance is a project which aims to provide common
