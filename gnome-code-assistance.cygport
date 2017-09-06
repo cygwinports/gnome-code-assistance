@@ -2,7 +2,7 @@ inherit python3 ruby gnome2
 
 NAME="gnome-code-assistance"
 VERSION=3.16.1
-RELEASE=1
+RELEASE=3
 CATEGORY="GNOME"
 SUMMARY="GNOME code assistance service"
 DESCRIPTION="gnome-code-assistance is a project which aims to provide common
@@ -10,8 +10,11 @@ code assistance services for code editors (simple editors as well as IDEs).
 It is an effort to provide a centralized code-assistance as a service for the
 GNOME platform instead of having every editor implement their own solution."
 
-PATCH_URI="0.3.1-as-needed.patch"
+PATCH_URI="
+	0.3.1-as-needed.patch
+	3.16-vala036.patch
+"
 
-DIFF_EXCLUDES="config.py dbus.conf *.service"
+DIFF_EXCLUDES="config.py dbus.conf *.service *.c"
 
 REQUIRES="girepository-GLib2.0"

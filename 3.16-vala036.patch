@@ -1,0 +1,23 @@
+https://git.gnome.org/browse/gnome-code-assistance/commit/?id=508e157
+
+--- origsrc/gnome-code-assistance-3.16.1/backends/vala/valaoptionparser.vala	2014-02-09 14:40:44.000000000 -0600
++++ src/gnome-code-assistance-3.16.1/backends/vala/valaoptionparser.vala	2017-09-06 03:05:02.436911500 -0500
+@@ -184,7 +184,6 @@ class OptionParser {
+ 		context.gir_directories = realpaths(wd, gir_directories);
+ 		context.metadata_directories = realpaths(wd, metadata_directories);
+ 		context.debug = debug;
+-		context.thread = thread;
+ 		context.mem_profiler = mem_profiler;
+ 		context.save_temps = save_temps;
+ 		if (profile == "gobject-2.0" || profile == "gobject" || profile == null) {
+--- origsrc/gnome-code-assistance-3.16.1/configure.ac	2016-07-04 14:50:47.000000000 -0500
++++ src/gnome-code-assistance-3.16.1/configure.ac	2017-09-06 02:54:39.641971400 -0500
+@@ -410,7 +410,7 @@ AC_ARG_ENABLE([vala],
+               [enable_vala=$enableval],
+               [enable_vala=auto])
+ 
+-BACKEND_VALA_LIBVALA_VERSIONS="libvala-0.34 libvala-0.32 libvala-0.30 libvala-0.28 libvala-0.26 libvala-0.24 libvala-0.22 libvala-0.20"
++BACKEND_VALA_LIBVALA_VERSIONS="libvala-0.38 libvala-0.36 libvala-0.34 libvala-0.32 libvala-0.30 libvala-0.28 libvala-0.26 libvala-0.24 libvala-0.22 libvala-0.20"
+ BACKEND_VALA_MODULES="gobject-2.0 >= 2.36 glib-2.0 >= 2.36 gio-2.0 >= 2.36 gee-0.8 gio-unix-2.0 >= 2.36"
+ 
+ BACKEND_VALA_LIBVALA=
